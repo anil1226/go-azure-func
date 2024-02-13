@@ -24,6 +24,9 @@ jobs:
     - name: Build
       run: GOOS=linux GOARCH=amd64 go build handler.go
 
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+
     - name: 'Deploy'
       uses: Azure/functions-action@v1.5.1
       id: fa
