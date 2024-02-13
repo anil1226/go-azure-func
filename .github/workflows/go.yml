@@ -22,12 +22,13 @@ jobs:
         go-version: '1.20'
 
     - name: Build
-      run: GOOS=linux GOARCH=amd64 go build handler.go
+      run: GOOS=linux GOARCH=amd64 go build -out ./output/app handler.go
 
     - name: 'Deploy'
       uses: Azure/functions-action@v1.5.1
       id: fa
       with:
         app-name: goprac
+        package: './output'
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 
