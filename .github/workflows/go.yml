@@ -34,5 +34,6 @@ jobs:
       id: fa
       with:
         app-name: goprac
+        respect-funcignore: true
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 
