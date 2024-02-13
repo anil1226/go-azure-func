@@ -43,7 +43,9 @@ jobs:
       
     - name: Install Azure Functions Core Tools
       run: |
-        npm install -g azure-functions-core-tools@3 --unsafe-perm=true
+       npm uninstall -g azure-functions-core-tools
+       npm install -g azure-functions-core-tools@3 --unsafe-perm true
+      
       
     - name: Login to Azure
       uses: azure/login@v1
