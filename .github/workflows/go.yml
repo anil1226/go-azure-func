@@ -52,7 +52,7 @@ jobs:
       
     - name: Deploy to Azure Functions
       run: |
-       func azure functionapp publish goprac --build --no-build
+       func azure functionapp publish goprac --no-build
 
 
     # - name: 'Deploy'
